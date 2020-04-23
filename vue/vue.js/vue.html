@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue模板</title>
+    <link rel="stylesheet" type="text/css" href="book.css">
+</head>
+<body>
+<div id="app">
+    <table>
+        <tr v-for="book in bookList">
+            <td >
+                {{book.id}}
+            </td>
+            <td>
+                {{book.name}}
+            </td>
+            <td>
+                <input type="button"  value="查看" @click="btn">
+                <p id="show" v-if="btn">{{book.name}}</p>
+            </td>
+
+        </tr>
+    </table>
+
+
+</div>
+
+ <script src="vue.js"></script>
+<script src="jquery-3.4.1.min.js"></script>
+<script src="vue-router.js"></script>
+ <script src="new.js"></script>
+</body>
+</html>
